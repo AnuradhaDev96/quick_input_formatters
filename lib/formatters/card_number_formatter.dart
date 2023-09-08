@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 class CardNumberFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue,
-      TextEditingValue newValue,
-      ) {
+    TextEditingValue oldValue,
+    TextEditingValue newValue,
+  ) {
     var inputText = newValue.text;
 
     if (newValue.selection.baseOffset == 0) {
