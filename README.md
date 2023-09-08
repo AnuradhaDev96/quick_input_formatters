@@ -12,21 +12,20 @@ are available in this package.
 Add in the `pubspec.yaml`
 ```yaml
 dependencies:
-  quick_input_formatters ^0.0.3
+  quick_input_formatters ^0.0.4
 ```
 
 ## Usage
 
 Usage of DecimalTextInputFormatter in TextField/TextFormField
 to format a number input value with 2 decimal places.
+You should use FilteringTextInputFormatter.digitsOnly with DecimalTextInputFormatter formatter.
 
 ```dart
 Widget get currencyTextField => TextField(
   inputFormatters: [
-    // Use flutter input formatters to improve support
-    FilteringTextInputFormatter.deny(RegExp(r'[a-zA-Z]')), // Denies letters
-    FilteringTextInputFormatter.deny(RegExp(r' ')), // Denies whitespaces
-    FilteringTextInputFormatter.deny(RegExp(r'-')), // Denies -
+    // Use thi input formatter to improve outcome
+    FilteringTextInputFormatter.digitsOnly,
 
     // Use this input formatter to convert number inputs with decimal places
     // (Here it is 2 decimal places because user inputs currency values,

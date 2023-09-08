@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * Code formatting done.
+
+## 0.0.4
+
+* Optimized formatters.
