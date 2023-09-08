@@ -5,3 +5,7 @@
 ## 0.0.2
 
 * Resolved code issues in this patch.
+
+## 0.0.3
+
+* Code formatting done.

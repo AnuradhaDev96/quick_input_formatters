@@ -12,7 +12,7 @@ are available in this package.
 Add in the `pubspec.yaml`
 ```yaml
 dependencies:
-  quick_input_formatters ^0.0.2
+  quick_input_formatters ^0.0.3
 ```
 
 ## Usage
