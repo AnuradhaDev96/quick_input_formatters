@@ -1,8 +1,7 @@
 name: quick_input_formatters
 description: >-
   Custom text input formatters that can be used with TextField and TextFormField widgets are available in this package.
-version: 0.0.1
-homepage:
+version: 0.0.2
 
 repository: https://github.com/AnuradhaDev96/quick_input_formatters
 
