@@ -12,10 +12,14 @@ class DecimalTextInputFormatter extends TextInputFormatter {
   DecimalTextInputFormatter(this.decimalPoints);
 
   @override
-  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
     double doubleValue = double.tryParse(newValue.text) ?? 0;
-    String formattedValue = (doubleValue / (pow(10, decimalPoints))).toStringAsFixed(decimalPoints);
+    String formattedValue =
+        (doubleValue / (pow(10, decimalPoints))).toStringAsFixed(decimalPoints);
 
-    return newValue.copyWith(text: formattedValue, selection: TextSelection.collapsed(offset: formattedValue.length));
+    return newValue.copyWith(
+        text: formattedValue,
+        selection: TextSelection.collapsed(offset: formattedValue.length));
   }
 }
