@@ -8,7 +8,8 @@ class DecimalTextInputFormatter extends TextInputFormatter {
   DecimalTextInputFormatter(this.decimalPoints);
 
   @override
-  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
     if (newValue.text.isNotEmpty) {
       final parsedValue = double.tryParse(newValue.text);
       if (parsedValue != null) {

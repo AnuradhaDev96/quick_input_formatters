@@ -2,7 +2,8 @@ import 'package:flutter/services.dart';
 
 class CardExpirationDateFormatter extends TextInputFormatter {
   @override
-  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
     final newValueString = newValue.text;
     String valueToReturn = '';
 
@@ -10,7 +11,9 @@ class CardExpirationDateFormatter extends TextInputFormatter {
       if (newValueString[i] != '/') valueToReturn += newValueString[i];
       var nonZeroIndex = i + 1;
       final contains = valueToReturn.contains(RegExp(r'/'));
-      if (nonZeroIndex % 2 == 0 && nonZeroIndex != newValueString.length && !(contains)) {
+      if (nonZeroIndex % 2 == 0 &&
+          nonZeroIndex != newValueString.length &&
+          !(contains)) {
         valueToReturn += '/';
       }
     }

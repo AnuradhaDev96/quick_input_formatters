@@ -21,8 +21,10 @@ class CurrencyTextFieldExample extends StatelessWidget {
           child: TextField(
             inputFormatters: [
               // Use flutter input formatters to improve support
-              FilteringTextInputFormatter.deny(RegExp(r'[a-zA-Z]')), // Denies letters
-              FilteringTextInputFormatter.deny(RegExp(r' ')), // Denies whitespaces
+              FilteringTextInputFormatter.deny(
+                  RegExp(r'[a-zA-Z]')), // Denies letters
+              FilteringTextInputFormatter.deny(
+                  RegExp(r' ')), // Denies whitespaces
               FilteringTextInputFormatter.deny(RegExp(r'-')), // Denies -
 
               // Use this input formatter to convert number inputs with decimal places
